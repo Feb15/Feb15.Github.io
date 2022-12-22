@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>
+		Hatim's Favorite Places
+	</title>
+    <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
+	<!--Style CSS-->
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<h1>Welcome to my Photo Gallery </h1>
+	<h6>By - Hatim Ghasletwala</h6>
+
+
+	<div class="myProducts">
+		<div class="myProducts-gallery">
+			<img src="liberty.jpeg"
+				alt="Statue of Liberty, New York"
+				onclick="myImageFunction(this)">
+			<img src="stonehenge.jpeg"
+ 				alt="Stonehenge, UK"
+				onclick="myImageFunction(this)">
+			<img src="spaceneedle.jpeg"
+				alt="Space Needle, Seattle"
+				onclick="myImageFunction(this)">
+			<img src="goldengatebridge.jpeg"
+				alt="Golden Gate Bridge, San Francisco"
+				onclick="myImageFunction(this)">
+		</div>
+
+		<div class="image-container">
+			<img id="img-Box" src="liberty.jpeg""
+				alt="Statue of Liberty, New York ">
+		</div>
+
+	</div>
+		 
+	<div id="altdiv">  </div>
+
+
+	<script>
+		function myImageFunction(productSmallImg) {
+			var productFullImg = document.getElementById("img-Box");
+		     productFullImg.src = productSmallImg.src;
+			 productFullImg.alt = productSmallImg.alt;
+			 var x = document.getElementById("img-Box").alt;
+  				document.getElementById("altdiv").innerHTML = x; 
+		}
+
+
+	
+
+
+	</script>
+</body>
+
+</html>
